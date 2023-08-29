@@ -19,7 +19,7 @@ comments['textblob_polarite']       = comments['var_lemma_nosw_txt'].apply(lambd
 comments['textblob_subjectivite']   = comments['var_lemma_nosw_txt'].apply(lambda text : TextBlob(text).sentiment.subjectivity)
 
 # Utilisation du lexique FEEL #
-lexique_feel = pd.read_csv("/home/ac/Documents/Boulot/Data Science/NLP/Analyse de sentiments/FEEL.csv", sep=',', encoding='utf-8')
+lexique_feel = pd.read_csv("FEEL.csv", sep=',', encoding='utf-8')
 liste_positif = lexique_feel.loc[lexique_feel['polarity']=='positive','word'].tolist()
 liste_negatif = lexique_feel.loc[lexique_feel['polarity']=='negative','word'].tolist()
 liste_joie = lexique_feel.loc[lexique_feel['joy']==1,'word'].tolist()
